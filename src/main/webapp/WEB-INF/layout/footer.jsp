@@ -1,0 +1,1 @@
+Copyright &copy; Denys Triasunov 2016

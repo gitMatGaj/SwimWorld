@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
+>
+
+<head>
+	<meta charset="utf-8" />
+	<title>Gdzie najlepiej popływać</title>
+	<meta name="description" content="Serwis prezentuje ranking basenów" />
+	<meta name="keywords" content="najlepsze baseny, wydarzenia, szkoły pływania" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" th:href="@{/resources/css/style.css}"/>
+    
+</head>
+
+<body>
+	<div class="container">
+	
+		<header class="header">
+				 <nav class="nav">
+				 <div class="welcome">
+				 <div class="hello">  Hello </div>
+				<div class="name" sec:authentication="name"></div>
+				</div>
+				<div class="logout">
+				<form th:action="@{/logout}" method="POST">
+				  
+				   <input class="button1" type="submit" value="Logout"/>
+				   
+                   
+                   </form>
+				</div>
+				    <div class="Logo">
+					<h1>80X40</h1>
+					</div>
+					<ul class="menu">
+					<li><a href="#">Miejsca</a></li>
+					<li><a href="#">Wydarzenia</a></li>
+					<li><a href="#">Atrakcje</a></li>
+					<li><a href="#">Blog</a></li>
+					</ul>
+				 </nav>
+				 <div class="photoText">
+				    <h1>Znajdź najlepsze miejsce do spędzania czasu nad <span style="color:#43a4f7;">wodą</span></h1>
+					<div class="box">
+						<div class="custom-select" >
+							<select>
+								<option value="0">Wszystkie</option>
+								<option value="1">Miejsca</option>
+								<option value="2">Wydarzenia</option>
+								<option value="3">Atrakcje</option>
+								<option value="4">Blog</option>	
+							</select>
+							<form>
+								<input type="text" name="nie wiem co to" placeholder="nazwa miasta/miejsca">
+								<input type="submit" name="nie wiem co to" value="Szukaj">
+							</form>
+						</div>
+					</div>
+				 </div>
+				 <div class="blueframe">					
+				</div>
+		</header>
+		
+		<main class="main">
+			<div class="firstwindow">
+				<div class="first">
+					<h1>
+					Polecane miejsca
+					</h1>
+					<div class="buttonposition">
+						<button class="button" href="#">Dodaj nowy obiekt</button>
+					</div>
+				</div>
+				<div class="second">
+					<div class="firsttext">
+						<a href="#">
+						Najpopularniejsze
+						</a>
+					</div>
+					<div class="secondtext">
+						<a href="#">
+						Najwyżej oceniane
+						</a>
+					</div>
+					<div class="thirdtext"> 
+						<a href="#">
+						Zobacz wszystkie
+						</a>
+					</div>
+				</div>
+				<div class="ad1">
+					<div class="ad1rightside">
+						<h1> Termy Kraków </h1>
+						<p> ul.Mikulasza 22<br>Mikulasz</p>
+						<p> Czynne pon-pt od 9.00 do 21.00</p>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+							<br>
+							<a>Liczba ocen (368)</a>
+					</div>
+					<div class="ad1MiddleSide">
+					<h1>Before they <br>sold out butcher flexitarian,<br>fixie tousled la croix<br> prism whatever</h1>
+					</div>
+					
+					<div class="ad1details">
+						<a class="textad1details">Szczegóły </a>
+						<div class="arrow">
+						&rArr;
+						</div>
+					</div>
+				</div>
+				<div class="thirdphotos">
+						<div class="firstphotos">
+							<div class="backgroundfirst">
+								<div class="open"> <a> otwarte</a></div>
+							</div>
+						<div class="textfirst">
+							<h1> Pływalnia Tatralandia </h1>
+							<p> ul.Mikulasza 22<br>Mikulasz</p>
+							<a href="#">Sprawdź dojazd</a>
+							<p> Czynne pon-pt od 9.00 do 21.00</p>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+							<div class="ad1details">
+								<a class="textad1details">Szczegóły </a>
+								<div class="arrow">
+								&rArr;
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="secondphotos">
+						<div class="backgroundsecond">
+							<div class="open"> <a> otwarte</a></div>
+						</div>
+						<div class="textsecond">
+							<h1> Pływalnia Tatralandia </h1>
+							<p> ul.Mikulasza 22<br>Mikulasz</p>
+							<a href="#">Sprawdź dojazd</a>
+							<p> Czynne pon-pt od 9.00 do 21.00</p>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+							<div class="ad1details">
+								<a class="textad1details">Szczegóły </a>
+								<div class="arrow">
+								&rArr;
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="thirdphotos2">
+						<div class="backgroundthirdphotos2">
+							<div class="open"> <a> otwarte</a></div>
+						</div>
+						<div class="textthirdphotos2">
+							<h1> Pływalnia Tatralandia </h1>
+							<p> ul.Mikulasza 22<br>Mikulasz</p>
+							<a href="#">Sprawdź dojazd</a>
+							<p> Czynne pon-pt od 9.00 do 21.00</p>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+							<div class="ad1details">
+								<a class="textad1details">Szczegóły </a>
+								<div class="arrow">
+								&rArr;
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="ad2">
+					<div class="ad2rightside">
+						<h1> Termy Warszawa </h1>
+						<p> ul.Mikulasza 22<br>Mikulasz</p>
+						<p> Czynne pon-pt od 9.00 do 21.00</p>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star"></span>
+						<br>
+						<a>Liczba ocen (368)</a>
+					</div>
+						<div class="ad2MiddleSide">
+							<h1>Before they <br>sold out butcher flexitarian,<br>fixie tousled la croix<br> prism whatever</h1>
+						</div>
+						<div class="ad2details">
+							<a class="textad2details">Szczegóły </a>
+							<div class="arrow">
+							&rArr;
+							</div>
+						</div>
+				</div>
+				<div class="divblueframe2">	 
+					<div class="blueframe2">	 
+					</div>
+				</div>
+			</div>
+			
+			<div class="secondwindow">
+					<div class="first">
+						<h1>
+						Polecane Wydarzenia
+						</h1>
+						<div class="buttonposition">
+							<button class="button" href="#">Dodaj nowe wydarzenie</button>
+						</div>
+					</div>
+					<div class="second">
+						<div class="firsttext">
+							<a href="#">
+							Najpopularniejsze
+							</a>
+						</div>
+						<div class="secondtext">
+							<a href="#">
+							Najwyżej oceniane
+							</a>
+						</div>
+						<div class="thirdtext"> 
+							<a href="#">
+							Zobacz wszystkie
+							</a>
+						
+						</div>
+					</div>
+				<div class="thirdphotos">
+						<div class="firstphotos">
+							<div class="backgroundfirst">
+								<div class="open"> <a> otwarte</a></div>
+							</div>
+							<div class="textfirst">
+								<h1> Pływalnia Tatralandia </h1>
+								<p> ul.Mikulasza 22<br>Mikulasz</p>
+								<a href="#">Sprawdź dojazd</a>
+								<p> Czynne pon-pt od 9.00 do 21.00</p>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<div class="ad1details">
+									<a class="textad1details">Szczegóły </a>
+									<div class="arrow">
+									&rArr;
+									</div>
+								</div>
+							</div>
+						</div>
+					<div class="secondphotos">
+						<div class="backgroundsecond">
+							<div class="open"> <a> otwarte</a></div>
+						</div>
+						<div class="textsecond">
+							<h1> Pływalnia Tatralandia </h1>
+							<p> ul.Mikulasza 22<br>Mikulasz</p>
+							<a href="#">Sprawdź dojazd</a>
+							<p> Czynne pon-pt od 9.00 do 21.00</p>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+							<div class="ad1details">
+								<a class="textad1details">Szczegóły </a>
+								<div class="arrow">
+								&rArr;
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="thirdphotos2">
+						<div class="backgroundthirdphotos2">
+							<div class="open"> <a> otwarte</a></div>
+						</div>
+						<div class="textthirdphotos2">
+							<h1> Pływalnia Tatralandia </h1>
+							<p> ul.Mikulasza 22<br>Mikulasz</p>
+							<a href="#">Sprawdź dojazd</a>
+							<p> Czynne pon-pt od 9.00 do 21.00</p>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+							<div class="ad1details">
+								<a class="textad1details">Szczegóły </a>
+								<div class="arrow">
+								&rArr;
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="ad2">
+					<div class="ad2rightside">
+						<h1> Aquarion Żory </h1>
+						<p> ul.Żorska 22<br>Żory</p>
+						<p> Czynne pon-pt od 9.00 do 21.00</p>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star"></span>
+						<br>
+						<a>Liczba ocen (368)</a>
+					</div>
+					<div class="ad2MiddleSide">
+					<h1>Special offer! This week only. Exclusive! 500 PLN. Save<span style="color:blue"> 20%</span> on all-summer-unlimited pass.</h1>
+					</div>
+					<div class="ad2details">
+						<a class="textad2details">Szczegóły </a>
+						<div class="arrow">
+						&rArr;
+						</div>
+					</div>
+				</div>
+					<div class="divblueframe2">	 
+						<div class="blueframe2">	 
+						</div>
+					</div>
+			</div>
+			
+			<div class="thirdwindow">
+				<div class="first">
+					<h1>
+					Polecane Wydarzenia
+					</h1>
+					<div class="buttonposition">
+						<button class="button" href="#">Dodaj nowe wydarzenie</button>
+					</div>
+				</div>
+				<div class="second">
+					<div class="firsttext">
+						<a href="#">
+						Najpopularniejsze
+						</a>
+					</div>
+					<div class="secondtext">
+						<a href="#">
+						Najwyżej oceniane
+						</a>
+					</div>
+					<div class="thirdtext"> 
+						<a href="#">
+						Zobacz wszystkie
+						</a>
+					</div>
+				</div>
+				<div class="ad2">
+					<div class="ad2rightside">
+						<h1> Aquarion Żory </h1>
+						<p> ul.Żorska 22<br>Żory</p>
+						<p> Czynne pon-pt od 9.00 do 21.00</p>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star"></span>
+						<br>
+						<a>Liczba ocen (368)</a>
+					</div>
+					<div class="ad2MiddleSide">
+						<h1>Special offer! This week only. Exclusive! 500 PLN. Save<span style="color:blue"> 20%</span> on all-summer-unlimited pass.</h1>
+					</div>
+					<div class="ad2details">
+						<a class="textad2details">Szczegóły </a>
+						<div class="arrow">
+						&rArr;
+						</div>
+					</div>
+				</div>
+					
+				<div class="ad2">
+					<div class="ad2rightside">
+						<h1> Aquarion Żory </h1>
+						<p> ul.Żorska 22<br>Żory</p>
+						<p> Czynne pon-pt od 9.00 do 21.00</p>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star"></span>
+						<br>
+						<a>Liczba ocen (368)</a>
+					</div>
+					<div class="ad2MiddleSide">
+						<h1>Special offer! This week only. Exclusive! 500 PLN. Save<span style="color:blue"> 20%</span> on all-summer-unlimited pass.</h1>
+					</div>
+					<div class="ad2details">
+						<a class="textad2details">Szczegóły </a>
+						<div class="arrow">
+						&rArr;
+						</div>
+					</div>
+				</div>
+	
+				<div class="ad2">
+					<div class="ad2rightside">
+						<h1> Aquarion Żory </h1>
+						<p> ul.Żorska 22<br>Żory</p>
+						<p> Czynne pon-pt od 9.00 do 21.00</p>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star"></span>
+						<br>
+						<a>Liczba ocen (368)</a>
+					</div>
+					<div class="ad2MiddleSide">
+						<h1>Special offer! This week only. Exclusive! 500 PLN. Save<span style="color:blue"> 20%</span> on all-summer-unlimited pass.</h1>
+					</div>
+					<div class="ad2details">
+						<a class="textad2details">Szczegóły </a>
+						<div class="arrow">
+						&rArr;
+						</div>
+					</div>
+				</div>
+					<div class="divblueframe2">	 
+						<div class="blueframe2">	 
+						</div>
+					</div>
+			</div>
+			
+			
+			<div class="fourwindow">
+				<div class="first">
+					<h1>
+					Polecane Artykuły
+					</h1>
+					<div class="buttonposition">
+						<button class="button" href="#">Dodaj nowy artykuł</button>
+					</div>
+				</div>
+				<div class="second">
+					<div class="firsttext">
+						<a href="#">
+						Najpopularniejsze
+						</a>
+					</div>
+					<div class="secondtext">
+						<a href="#">
+						Najwyżej oceniane
+						</a>
+					</div>
+					<div class="thirdtext"> 
+						<a href="#">
+						Zobacz wszystkie
+						</a>
+					
+					</div>
+				</div>
+				<div class="thirdphotos">
+					<div class="firstphotos">
+						<div class="backgroundfirst">
+						<div class="open"> <a> otwarte</a></div>
+						</div>
+						<div class="textfirst">
+							<h1> Pływalnia Tatralandia </h1>
+							<p> ul.Mikulasza 22<br>Mikulasz</p>
+							<a href="#">Sprawdź dojazd</a>
+							<p> Czynne pon-pt od 9.00 do 21.00</p>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+							<div class="ad1details">
+								<a class="textad1details">Szczegóły </a>
+								<div class="arrow">
+								&rArr;
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="secondphotos">
+						<div class="backgroundsecond">
+							<div class="open"> <a> otwarte</a></div>
+						</div>
+						<div class="textsecond">
+							<h1> Pływalnia Tatralandia </h1>
+							<p> ul.Mikulasza 22<br>Mikulasz</p>
+							<a href="#">Sprawdź dojazd</a>
+							<p> Czynne pon-pt od 9.00 do 21.00</p>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+							<div class="ad1details">
+								<a class="textad1details">Szczegóły </a>
+								<div class="arrow">
+								&rArr;
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="thirdphotos2">
+						<div class="backgroundthirdphotos2">
+							<div class="open"> <a> otwarte</a></div>
+						</div>
+						<div class="textthirdphotos2">
+							<h1> Pływalnia Tatralandia </h1>
+							<p> ul.Mikulasza 22<br>Mikulasz</p>
+							<a href="#">Sprawdź dojazd</a>
+							<p> Czynne pon-pt od 9.00 do 21.00</p>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+							<div class="ad1details">
+								<a class="textad1details">Szczegóły </a>
+								<div class="arrow">
+								&rArr;
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+			
+			<div class="down">
+		
+				<div class="downText">
+					<div class="DownTop">
+						<a class="a1DownTop">Kategorie</a>
+						<a class="a2DownTop">Więcej</a>
+						<a class="a3DownTop">Usługi</a>
+						<a class="a4DownTop">Znajdź nas</a>
+					</div>
+					<div class="DownBottom">
+						<div class="first1">
+							<ul class="menu1">
+								<div class="ahover">
+									<li ><a href="#">Basen</a></li>
+								</div>
+								<div class="ahover">
+									<li ><a href="#">Basen kryty</a></li>
+								</div>
+								<div class="ahover">
+									<li> <a href="#">Basen odkryty</a></li>
+								</div>
+								<div class="ahover">
+									<li><a href="#">Aquapark</a></li>
+								</div>
+								<div class="ahover">
+									<li ><a href="#">Sauna</a></li>
+								</div>
+							</ul>
+						</div>
+						<div class="second1">
+							<ul class="menu1">
+								<div class="ahover">
+									<li><a href="#">Wydarzenia</a></li>
+								</div>
+								<div class="ahover">
+									<li><a href="#">Artykuły</a></li>
+								</div>
+							</ul>
+						</div>
+						<div class="third">
+							<ul class="menu1">
+								<div class="ahover">
+									<li><a href="#">Nauka pływania</a></li>
+								</div>
+								<div class="ahover">
+									<li><a href="#">Nauka nurkowania</a></li>
+								</div>
+							</ul>
+						</div>
+						<div class="four">
+							<ul class="menu1">
+								<div class="ahover">
+									<li><a href="#">Twitter</a></li>
+								</div>
+								<div class="ahover">
+									<li><a href="#">Instagram</a></li>
+								</div>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer class="footer">
+				<div class="footertext">
+					<ul class="menufooter">
+						<li><a href="#">Kontakt</a></li>
+						<li><a href="#">Polityka prywatności</a></li>
+						<li><a href="#">Regulamin</a></li>
+					</ul>
+				</div>
+			</footer>
+		</main>
+	</div>
+</body>
+</html>

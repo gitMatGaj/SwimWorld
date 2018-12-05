@@ -1,0 +1,83 @@
+body
+{
+	/* Background pattern from subtlepatterns.com */
+	background-image: url(../images/tlo.jpg);
+	font-size: 20px;
+    font-family: sans-serif;
+    text-align: center;
+        background-size: cover;
+             background-repeat: no-repeat;
+    background-position: center;
+    overflow: auto;
+}
+table, td, th {    
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 1%;
+}
+
+th, td {
+    padding: 10px;
+}
+tr:nth-child(even) {
+	background-color: #fff;
+}
+tr:nth-child(odd) {
+	background-color: #ddd;
+	
+}
+.container a
+{
+	
+	text-decoration:none;
+	opacity:0.7;
+	transition: all .2s ease-in-out;
+	color:#007bff;
+}
+
+.container a:hover {
+    text-decoration: none;
+	color: #105aa9;
+	opacity:1;
+	cursor: pointer;
+}
+.container h2
+{
+	    margin-top: 20px;
+    margin-bottom: 10px;
+}
+input[type=button]
+{
+	width: 300px;
+	background-color: #1aab45;
+	font-size:20px;
+	color: white;
+	margin-top:15px;
+	padding: 15px 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	letter-spacing: 2px;
+	outline: none;
+	opacity:0.7;
+	transition: all .2s ease-in-out;
+}
+
+input[type=button]:focus
+{
+	-webkit-box-shadow: 0px 0px 15px 5px rgba(204,204,204,0.9);
+	-moz-box-shadow: 0px 0px 15px 5px rgba(204,204,204,0.9);
+	box-shadow: 0px 0px 15px 5px rgba(204,204,204,0.9);
+}
+
+input[type=button]:hover
+{
+	background-color: #247b3e;
+	opacity:1;
+}

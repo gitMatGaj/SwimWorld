@@ -1,0 +1,612 @@
+body
+{
+	background:white;
+}
+.container
+{
+	
+	margin-left:auto;
+	margin-right:auto;
+	width:1000px;
+}
+.header
+{ 
+position:relative;
+	height:439px;
+}
+.nav
+{
+	position:relative;
+	height:100px;
+	background:#43a4f7;
+}
+.welcome
+{
+	position: absolute;
+    color: #eee;
+    top: 7px;
+    right: 0px;
+    font-size: 16px;
+    width: 130px;
+    height: 20px;
+    
+}
+
+.name
+{
+	position: absolute;
+    left: 41px;
+    top: 0px;
+}
+.logout
+{
+	position: absolute;
+
+    top: 25px;
+    right: 41px;
+    border: none;
+   
+
+    text-align: center;
+    font-size: 16px;
+
+}
+.button1
+{
+	  background-color: #0e86da;
+    border: none;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    border-radius: 10px;
+   
+}
+.button1:hover
+{
+	 cursor: pointer;
+	 background-color: white; 
+    color: #0e86da;
+}
+.Logo
+{
+	position:absolute;
+	top:30px;
+	margin-left:20px;
+	background:gray;
+	width:80px;
+	height:40px;
+	
+}
+.Logo h1
+{
+	font-size:15px;
+	text-align:center;
+	margin-top: auto;
+	margin-bottom: auto;
+	padding:12px;
+	
+}
+.menu
+{
+	position:absolute;
+	float:left;
+	right:0px;
+	list-style-type: none;
+	padding:1px 17px 1px 17px;
+	font-size:33px;
+	top:19px;
+}
+	
+.menu > li
+{
+	
+	display: inline-block;
+	padding-right:5px;
+	padding-left:5px;
+	border-right: 1px dashed #0a2b42;
+}
+.menu > li:first-child
+{
+	border-left: 1px dashed #0a2b42;
+}
+.menu a
+{
+	
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.menu a:hover
+{
+	color: #000000;
+	opacity:1;
+	cursor: pointer;
+}
+.photoText
+{
+	position:relative;
+	height:300px;
+	background-image: url(../images/pool.jpg);
+	background-size: cover ;
+}
+.photoText h1
+{
+	position:relative;
+	text-align:center;
+	top:80px;
+	margin:0px;
+	color:white;
+}
+.box
+{
+	position:relative;
+	top:100px;
+	height:80px;
+}
+.box input
+{   
+	position:relative;
+	left:200px;
+    top:10px;
+    height:40px;
+	outline: none;
+	float:left;
+	border: 1px solid blue; 
+	box-sizing: border-box;
+	transition:.5s;
+	font-size:20px;
+	
+}
+.custom-select input[type="text"]
+{
+	width:300px;
+	border-radius:  25px 0px 0px 25px ;
+	border-right:none;
+	padding: 0 20px;
+}
+.custom-select input[type="submit"]
+{
+	border-radius: 0px 25px 25px 0px; 
+	background:blue;
+	cursor:pointer;
+	left:315px;
+	width:100px;
+	color:white;
+}
+.custom-select select
+{
+	height:40px;
+	position:absolute;
+	left:500px;
+	top:10px;
+	width:115px;
+	border: 1px solid blue; 
+	outline: none;
+	float:left;
+	font-size:20px;
+	color:blue;
+}
+
+.blueframe
+{
+	position: absolute;
+	top: 399px;
+	background: linear-gradient(to bottom, rgba(30, 87, 153, 0) 0%, rgba(30, 87, 153, 0.8) 5%, #1e5799 8%, #1e5799 20%, #2989d8 50%, #1e5799 80%, #1e5799 93%, rgba(30, 87, 153, 0.8) 97%, rgba(30, 87, 153, 0) 100%);
+	height:40px;
+	width:100%;
+}
+ .main
+{
+	background:white;
+}
+.first
+{
+	position:relative;
+	height:90px;
+}
+.first h1
+{
+	float:left;
+	color:black;
+	font-size:30px;
+}
+.buttonposition
+{
+	padding:20px;
+	position:absolute;
+	right:0px;
+	width:300px;
+	height:34px;
+}
+.first button
+{
+	float:left;
+	position:absolute;
+	right:0px;
+	font-size:30px;
+}
+.second
+{
+	height:50px;
+	position:relative;
+	clear:both;
+}
+.second a
+{
+	text-decoration: none;
+	font-size:24px;
+}
+.firsttext
+{
+	float:left;
+	padding:5px;
+	padding-left:0px;
+	
+}
+.secondtext
+{
+	padding:5px;
+	float:left;
+}
+
+.thirdtext
+{
+	
+	position:absolute;
+	right:0px;
+	float:left;
+	padding:5px;
+}
+.ad1
+{
+	position:relative;
+	clear:both;
+	height:350px;
+	background-image:url(../images/meduza.jpg);
+	 background-size: 100% 100%;
+	 background-repeat: no-repeat;
+}
+.ad1rightside
+{
+	position:absolute;
+	left:30px;
+	font-size:24px;
+	color:white;
+}
+.ad1rightside h1
+{
+	margin-top:0;
+}
+.ad1MiddleSide
+{
+	width:400px;
+	position:absolute;
+	top:0px;
+	right:120px;
+	font-size:20px;
+	text-align:center;
+}
+.ad1MiddleSide h1
+{
+	margin:15px;
+	color:white;
+}
+.open
+{
+	background:#00ff00;
+	position:absolute;
+	top:10px;
+	right:0;
+	width:80px;
+	height:30px;
+	font-size:25px;
+	text-align:center;
+	
+}
+.ad1details
+{
+	width:100%;
+	height:50px;
+	position:absolute;
+	bottom:0;
+	background-color:#43d4f7;
+	font-size:25px;	
+color:white;
+	
+}
+.textad1details
+{
+position:absolute;
+left:0px;
+padding:10px;
+
+}
+.arrow
+{
+	position:absolute;
+	right:10px;
+	top:-5px;
+	font-size:50px;
+	
+	
+}
+.thirdphotos
+{
+	height: 534px;
+	margin-top:30px;
+}
+.firstphotos
+{
+	
+	height:521px;
+	width:300px;
+	float:left;
+	 margin-right:44px;
+	 border: 2px solid #43a4f7;
+	
+}
+.backgroundfirst		
+{
+	position:relative;
+	margin-left:1px;
+	margin-right:1px;
+	height:200px;
+	background-image:url(../images/tatra1.jpg);
+	background-size: 100% 100%;
+	 background-repeat: no-repeat;
+}
+.textfirst
+{
+	position:relative;
+	height:300px;
+	text-align:center;
+}
+.secondphotos
+{
+	position:relative;
+	 height:521px;
+	width:300px;
+	float:left;
+	 margin-right:44px;
+	 border: 2px solid #43a4f7;
+}
+.backgroundsecond		
+{
+	position:relative;
+	margin-left:1px;
+	margin-right:1px;
+	height:200px;
+	background-image:url(../images/tatra2.jpg);
+	background-size: 100% 100%;
+	 background-repeat: no-repeat;
+}
+.textsecond
+{
+	height:300px;
+	text-align:center;
+}
+.thirdphotos2
+{
+	position:relative;
+	 height:521px;
+	width:300px;
+	float:left;
+	 border: 2px solid #43a4f7;
+}
+.backgroundthirdphotos2		
+{
+	position:relative;
+	margin-left:1px;
+	margin-right:1px;
+	height:200px;
+	background-image:url(../images/tatra3.jpg);
+	background-size: 100% 100%;
+	 background-repeat: no-repeat;
+}
+.textthirdphotos2
+{
+	height:300px;
+	text-align:center;
+}
+.checked 
+{
+    color: orange;
+}
+
+.ad2
+{
+	position:relative;
+	margin-top:20px;
+	clear:both;
+	height:350px;
+	background-image: url(../images/meduza.jpg);
+	 background-size: 100% 100%;
+	 background-repeat: no-repeat;
+}
+.ad2rightside
+{
+	position:absolute;
+	left:30px;
+	font-size:24px;
+	color:white;
+}
+.ad2rightside h1
+{
+	margin-top:0;
+}
+.ad2MiddleSide
+{
+	width:400px;
+	position:absolute;
+	top:0px;
+	right:120px;
+	font-size:20px;
+	text-align:center;
+}
+.ad2MiddleSide h1
+{
+	margin:15px;
+	color:white;
+}
+.ad2details
+{
+	width:100%;
+	height:50px;
+	position:absolute;
+	bottom:0;
+	background-color:#43d4f7;
+	font-size:25px;	
+color:white;
+	
+}
+.textad2details
+{
+position:absolute;
+padding:10px;
+
+}
+.divblueframe2
+{
+	top:0px;
+	position:relative;
+	height:60px;
+	
+}
+.blueframe2
+{   position:absolute;
+    top:20px;
+	background: linear-gradient(to bottom, rgba(30, 87, 153, 0) 0%, rgba(30, 87, 153, 0.8) 5%, #1e5799 8%, #1e5799 20%, #2989d8 50%, #1e5799 80%, #1e5799 93%, rgba(30, 87, 153, 0.8) 97%, rgba(30, 87, 153, 0) 100%);
+	height:40px;
+	width:100%;
+}
+.down
+{
+	position:relative;
+	height:300px;
+	background:#43d4f7;
+	
+}
+.DownTop
+{   position:relative;
+    top:40px;
+	height:50px;
+	width:800px;
+	margin-left:auto;
+	margin-right:auto;
+	border-bottom-style:solid;
+	border-bottom-color:white;
+	color:white;
+	text-align:center;
+}
+.DownTop a
+{
+	
+	margin:50px;
+	margin-bottom:5px;
+	font-size:25px;
+}
+.DownBottom
+{
+	 position:relative;
+    top:50px;
+	height:150px;
+	width:800px;
+	margin-left:auto;
+	margin-right:auto;
+	color:white;
+	font-size:25px;
+	
+	text-align:center;
+}
+
+.first1
+{
+	position:absolute;
+	float:left;
+	left:30px;
+	width:180px;
+	
+}
+.second1
+{
+	position:absolute;
+	width:180px;
+	left:215px;
+	float:left;
+}
+.third
+{
+	position:absolute;
+	float:left;
+	width:220px;
+	left:375px;
+}
+.four
+{
+	position:absolute;
+	float:left;
+	width:170px;
+	left:590px;
+}
+.menu1{
+	padding:0px;
+	margin:0px;
+}
+.menu1 li
+{
+	padding:5px;
+	list-style-type: none;
+}
+.menu1 a
+{
+	
+	color: #ffffff;
+	text-decoration: none;
+	transition: all .2s ease-in-out;
+}
+
+
+.menu1 a:hover
+{
+	font-weight: bold;
+	color: #000000;
+	opacity:1;
+	cursor: pointer;
+}
+.footer
+{
+	clear:booth;
+	height:60px;
+	background:blue;
+}
+
+.menufooter
+{
+	position:relative;
+	margin-left:auto;
+	margin-right:auto;
+	list-style: none;
+	font-size:25px;
+	width:800px;
+	text-align:center;
+	margin-top:0;
+}
+.menufooter li
+{
+	
+	display: inline-block;
+	margin:15px;
+}
+.menufooter a
+{
+	
+	text-decoration: none;
+	color: black;
+}
+.menufooter a:hover
+{
+	font-weight: bold;
+	color: #000000;
+	cursor: pointer;
+
+}

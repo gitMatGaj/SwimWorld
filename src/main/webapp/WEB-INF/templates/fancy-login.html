@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Login Page</title>
+	<link rel="stylesheet" th:href="@{/resources/css/login.css}"/>
+
+</head>
+
+<body>
+<div id="container">
+	<form  th:action="@{/authenticateTheUser}" method="POST">
+	
+		<p th:if="${param.error}">
+            Bad Credentials  
+        </p>
+        
+      <div th:if="${param.logout != null}">
+            <div>You have been logged out</div> 
+        </div>
+        
+			<input type="text" name="username" placeholder="username" onfocus="this.placeholder=''"onblur="this.placeholder='username'"/>
+		   
+		    <input type="password" name="password" placeholder="password" onfocus="this.placeholder=''"onblur="this.placeholder='password'" />
+		
+		
+		    <input type="submit" value="Login" />
+		
+		<input
+  type="hidden"
+  th:name="${_csrf.parameterName}"
+  th:value="${_csrf.token}" />
+	</form>
+
+ 		<h3><a th:href="@{/}">Back</a></h3>
+</div> 
+</body>
+
+</html>

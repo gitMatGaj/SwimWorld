@@ -1,0 +1,66 @@
+body
+{
+	/* Background pattern from subtlepatterns.com */
+	background-image: url(../images/tlo.jpg);
+	font-size: 20px;
+    font-family: sans-serif;
+    text-align: center;
+        background-size: cover;
+             background-repeat: no-repeat;
+    height: 100vh;
+    background-position: center;
+    overflow: auto;
+}
+
+input[type=submit]
+{
+	width: 300px;
+	background-color: #007bff;
+	font-size:20px;
+	color: white;
+	padding: 15px 10px;
+	margin-top: 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	letter-spacing: 2px;
+	outline: none;
+	opacity:0.7;
+	transition: all .2s ease-in-out;
+}
+
+input[type=submit]:focus
+{
+	-webkit-box-shadow: 0px 0px 15px 5px rgba(204,204,204,0.9);
+	-moz-box-shadow: 0px 0px 15px 5px rgba(204,204,204,0.9);
+	box-shadow: 0px 0px 15px 5px rgba(204,204,204,0.9);
+}
+
+input[type=submit]:hover
+{
+	background-color: #105aa9;
+	opacity:1;
+}
+.container
+{
+  position: absolute;
+  left: 30%;
+  top: 10%;
+  width: 40%;
+}
+
+.container a
+{
+	
+	text-decoration:none;
+	opacity:0.7;
+	transition: all .2s ease-in-out;
+	color:#007bff;
+}
+
+.container a:hover {
+    text-decoration: none;
+	color: #105aa9;
+	opacity:1;
+	cursor: pointer;
+}

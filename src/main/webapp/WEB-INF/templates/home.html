@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+
+<html
+xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org">  
+<head>
+<link rel="stylesheet" th:href="@{/resources/css/home.css}"/>
+
+</head>
+<body>
+<div class="bg">
+<div class="row">
+<h1>Welcome my friend!</h1>
+<h2>Sign in or create an account</h2>
+ 
+<a  th:href="@{/main}">Login</a> 
+<a  th:href="@{/register/showRegistrationForm}">Register</a>
+</div>
+</div>
+</body>
+</html>

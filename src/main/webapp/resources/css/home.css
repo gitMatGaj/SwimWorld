@@ -1,0 +1,49 @@
+body
+{
+	margin:0;
+}
+.bg
+{
+	background-image: url(../images/tlo.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+    background-position: center;
+   position: absolute;
+    width: 100%;
+     overflow: auto;
+     height: 100vh;
+}
+
+.row
+{
+	position: absolute;
+    left: 30%;
+    top: 35%;
+    width: 40%;
+    height: 30%;
+    text-align: center;
+   
+}
+.button
+{
+	
+	margin: 5px;
+	margin-left: 45px;
+}
+.row a
+{
+	color:#0000ff;
+	text-decoration:none;
+	opacity:0.6;
+	transition: all .2s ease-in-out;
+	text-align: center;
+    padding: 10px;
+    font-size: 25px;
+}
+
+.row a:hover {
+    text-decoration: none;
+	color: #0000cc;
+	opacity:1;
+	cursor: pointer;
+}

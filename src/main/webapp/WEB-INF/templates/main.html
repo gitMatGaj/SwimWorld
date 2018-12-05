@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+
+<html
+xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org"
+xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+	<title>User Page</title>
+    <link rel="stylesheet" th:href="@{/resources/css/main.css}"/>
+	
+</head>
+
+<body>
+<div class="container">
+
+	<h1>You are logged in !</h1>
+	
+    <h2><a th:href="@{/swimWebsite}">SwimWorld</a></h2>
+    
+    <div sec:authorize="hasRole('ADMIN')">
+  	<!-- Add a link to point to /systems ... this is for the admins -->
+	
+	<h2><a th:href="@{/admin/list}">Managment users</a></h2>
+		
+     </div>
+
+<h2>Information:</h2>
+
+Logged user: <div sec:authentication="name"></div>
+Roles: <div sec:authentication="principal.authorities"></div>
+
+	
+	
+    
+	<form th:action="@{/logout}" method="POST">
+         <input type="submit" value="Logout"/>
+    </form>
+	</div>
+</body>
+
+</html>

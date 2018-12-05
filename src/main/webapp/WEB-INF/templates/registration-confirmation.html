@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<link rel="stylesheet" th:href="@{/resources/css/confirmation.css}"/>
+	<title>Registration Confirmation</title>
+</head>
+
+<body>
+ 
+ <div class="row">
+
+	<h2>User registered successfully!</h2>
+	<div class="hello">
+	  <h3 class="float1">Hello</h3> 
+    <h3 class="float2" th:text="${crmUser.firstName}"></h3> 
+	</div>
+  
+	<h1><a th:href="@{/main}">Login to the swimingpoolWorld</a></h1>
+	
+	 </div>
+	
+</body>
+
+</html>
