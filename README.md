@@ -19,10 +19,10 @@ If you are admin you can also see list of users, add new admin, upgrade common u
 - MySQL
 
 # Details:
-- Database have two tabels:
+- Database have two tables:
    - Users
    - Role
-- Tabels has OneToMany connection
+- Tables has OneToMany connection
 - Full CRUD for Admin
 - Data validation
 - Thymeleaf "templates" folder (Apache Tiles for train in others folders)
