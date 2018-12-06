@@ -74,6 +74,6 @@ Create an account as a common user or simply log in using user or admin credenti
 3. Finally, if Tomcat is correctly configured, application should be available in server localization under this address:
     ```
     localhost:8080/[nameOfWarFile]/
-    np. http://localhost:8080/SpringHibernate/
+    for example: http://localhost:8080/SpringHibernate/
     ```
     Given that Tomcat is configured using default settings. 
