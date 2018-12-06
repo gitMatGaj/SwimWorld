@@ -5,12 +5,13 @@ Web application
 After registration you can login to the SwimWorld website as a common user.
 If you are admin you can also see list of users, add new admin, upgrade common users to the admin and delete other users.(CRUD)
 
-# Which technologies i used:
+# Technologies used:
 - Java
 - Spring Framework/MVC/Security 
 - Hibernate ORM 
 - HTML
 - CSS 
+- SQL
 - Thymeleaf 
 - Apache Tiles 
 - Bootstrap  
@@ -25,8 +26,8 @@ If you are admin you can also see list of users, add new admin, upgrade common u
 - Tables has OneToMany connection
 - Full CRUD for Admin
 - Data validation
-- Thymeleaf "templates" folder (Apache Tiles for train in others folders)
+- Thymeleaf in "templates" folder (Apache Tiles for train in others folders)
 - Configuration of the dispatcher service with the use of classes 
-   - Expand the AbstractAnnotationConfigDispatcherServletInitializer class and override the required methods
-   - Add maven-war-plugin configurations to pom. xml file, in order to don't need web.xml file
+   - Extend the AbstractAnnotationConfigDispatcherServletInitializer class and override the required methods
+   - Add maven-war-plugin configurations to pom.xml file, in order to don't need web.xml file
 - Connection to Database using Hibernate
