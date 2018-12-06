@@ -48,7 +48,7 @@ Create an account as a common user or simply log in using user or admin credenti
 - Full CRUD for Admin
 - Data validation
 - Thymeleaf in "templates" folder (Apache Tiles for self-study in other folders)
-- Configuration of the dispatcher service with the use of classes 
+- Configuration of the dispatcher servlet with the use of classes 
    - Extend the AbstractAnnotationConfigDispatcherServletInitializer class and override the required methods
    - Add maven-war-plugin configurations to pom.xml file, in order to not require web.xml file
 - Connection to Database using Hibernate
