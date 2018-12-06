@@ -2,7 +2,7 @@
 Web application
 
 # How web application work:
-Go to registration and get user role or simply login like user or admin.
+Go to registration and get user role or simply login like user or admin and see for yourself :)
  
   a) Common user:
     
