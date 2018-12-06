@@ -23,7 +23,7 @@ If you are admin you can also see list of users, add new admin, upgrade common u
 - Database have two tables:
    - Users
    - Role
-- Tables has OneToMany connection
+- Tables has OneToMany relation
 - Full CRUD for Admin
 - Data validation
 - Thymeleaf in "templates" folder (Apache Tiles for train in others folders)
