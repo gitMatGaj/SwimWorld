@@ -2,8 +2,13 @@
 Web application
 
 # How web application work:
-After registration you can login to the SwimWorld website as a common user.
-If you are admin you can also see list of users, add new admin, upgrade common users to the admin and delete other users.(CRUD)
+After registration you can:
+ - login to the SwimWorld website as a common user.
+If you are admin you can also(CRUD): 
+ - see list of users
+ - add new admin
+ - upgrade common users to the admin(default password "firmowe") 
+ - delete users
 
 # Technologies used:
 - Java
