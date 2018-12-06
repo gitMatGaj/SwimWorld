@@ -38,24 +38,42 @@ After registration you can:
 - Connection to Database using Hibernate
 
 
-# Opis konfiguracji
+# Configuration
+1. Create database mysql and run SQL which is in databaseInitialScript.sql file
+1. Utworzyć bazę danych mysql oraz uruchomić kod w języku SQL z pliku databaseInitialScript.sql
+2. In /SpringHibernate/src/main/resources/persistence-mysql.properties class go to set: url JDBC database, username, access password.
+2. W klasie /SpringHibernate/src/main/resources/persistence-mysql.properties należy ustawić parametry połączenia: Adres JDBC bazy danych, nazwę użytkownika, hasło dostępu.
 
-1. Utworzyć bazę danych postgresql oraz uruchomić ze wskazaniem utworzenej bazy plik databaseInitialScript.sql
-2. W klasie pl.bb166.contracts.administrator.configuration.PersistenceConfiguration należy ustawić parametry połączenia: Adres JDBC bazy danych, nazwę użytkownika, hasło dostępu.
-
+# Build project with Maven console
 # Przebieg budowy projektu przy pomocy konsoli Maven
+1. Open terminal
 1. Otworzyć terminal
+2. Go to localization pom.xml file our project
 2. Przejść do lokalizacji pliku pom.xml projektu
+3. Call the command:
+    ```
+    mvn package
+    ```
 3. Wywołać polecenie:
     ```
     mvn package
     ```
+4. If Maven configuration is correct (all necessarily settings are set) then build file *.war should be in target catalog, which you must put in Tomcat servlet container or in app server.  
 4. Jeśli Maven jest poprawnie skonfigurowany (tj. Ustawione są wszystkie niezbędne zmienne środowiskowe) w katalogu target powinien się pojawić zbudowany plik *.war, który można umieścić w kontenerze serwletów lub serwerze aplikacji.
 
+# Describe how to run application use Tomcat servlet container
 # Opis uruchomienia aplikacji z użyciem kontenera servletów Tomcat
 
+1. File *.war which was build in previous point, put in %folderZProgramemTomcat%/webapps localization
 1. Plik *.war zbudowany w poprzedmin punkcie, należy umieścić w lokalizacji %folderZProgramemTomcat%/webapps
+2. Afterwards according of system which you have, from bin Tomcat catalog run correct "startup" script
 2. Następnie w zależności od systemu, z katalogu bin Tomcat'a uruchomić odpowiedni skrypt "startup"
+3. If Tomcat is correctly configured, application should be available in server localization under this addres:
+    ```
+    localhost:8080/[nazwaPlikuWar]/
+    np. http://localhost:8080/SpringHibernate/
+    ```
+    Ofcourse Tomcat must be deafoult configurated 
 3. Jeśli Tomcat jest poprawnie skonfigurowany, aplikacja powinna być dostępna w lokalizacji serwera pod adresem:
     ```
     localhost:8080/[nazwaPlikuWar]/
