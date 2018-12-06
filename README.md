@@ -2,8 +2,19 @@
 Web application
 
 # How web application work:
-After registration you can:
- - login to the SwimWorld website as a common user.
+Go to registration and get user role or simply login like user or admin.
+ 
+  a) Common user:
+    - username: user
+    - password: testowy
+ 
+  - If you are Common user you can:
+    - go to the SwimWorld
+  
+  b) Admin:
+    - username: admin
+    - password: testowy
+ 
  - If you are admin you can also(CRUD): 
     - see list of users
     - add new admin
