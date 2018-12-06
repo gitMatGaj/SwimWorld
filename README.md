@@ -84,6 +84,7 @@ After registration you can:
  a) Admin:
   - username: admin
   - password: testowy
+ 
  b) Common user:
   - username: user
   - password: testowy
