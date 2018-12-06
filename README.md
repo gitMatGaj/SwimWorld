@@ -65,7 +65,7 @@ Create an account as a common user or simply log in using user or admin credenti
     ```
     mvn package
     ```
-4. If Maven configuration is correct (all necessarily (zmienne środowiskowe) are set) then the file *.war should appear in 'target' catalog, which you may put in Tomcat servlet container or in app server.
+4. If Maven configuration is correct (all necessarily environment variables are set) then the file *.war should appear in 'target' catalog, which you may put in Tomcat servlet container or in app server.
 
 # How to run application using Tomcat servlet container
 
