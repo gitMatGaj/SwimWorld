@@ -5,6 +5,7 @@ Web application
 Go to registration and get user role or simply login like user or admin.
  
   a) Common user:
+    
     - username: user
     - password: testowy
  
@@ -12,6 +13,7 @@ Go to registration and get user role or simply login like user or admin.
     - go to the SwimWorld
   
   b) Admin:
+    
     - username: admin
     - password: testowy
  
