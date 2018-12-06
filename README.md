@@ -80,4 +80,10 @@ After registration you can:
     np. http://localhost:8080/SpringHibernate/
     ```
     O ile Tomcat jest domyślnie skonfigurowany
-
+# Login option
+ a) Admin:
+  - username: admin
+  - password: testowy
+ b) Common user:
+  - username: user
+  - password: testowy
