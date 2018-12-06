@@ -17,6 +17,7 @@ Create an account as a common user or simply log in using user or admin credenti
     - password: testowy
  
   If you are an admin you can also (CRUD): 
+    
     - see the list of users
     - add new admin
     - grant common users admin status (default password "firmowe") 
