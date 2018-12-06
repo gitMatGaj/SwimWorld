@@ -10,7 +10,7 @@ After registration you can:
     - upgrade common users to the admin(default password "firmowe") 
     - delete users
 
-# Technologies used:
+# The technologies that I used:
 - Java
 - Spring Framework/MVC/Security 
 - Hibernate ORM 
