@@ -76,4 +76,8 @@ Create an account as a common user or simply log in using user or admin credenti
     localhost:8080/[nameOfWarFile]/
     for example: http://localhost:8080/SpringHibernate/
     ```
+<<<<<<< HEAD
     Given that Tomcat is configured using default settings. 
+=======
+    Given that Tomcat is configured using default settings. 
+>>>>>>> 9b105d83dab2bea4a1935dc6314bf9a2bceccf44
