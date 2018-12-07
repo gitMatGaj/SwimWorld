@@ -69,7 +69,7 @@ Create an account as a common user or simply log in using user or admin credenti
 
 # How to run application using Tomcat servlet container
 
-1. Put the file *.war which was built previously in %folderZProgramemTomcat%/webapps
+1. Put the file *.war which was built previously in %TomcatDirectory%/webapps
 2. Afterwards, depending on your operating system, from Tomcat's bin catalog run the correct "startup" script
 3. Finally, if Tomcat is correctly configured, application should be available in server localization under this address:
     ```
