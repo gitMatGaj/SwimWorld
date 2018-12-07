@@ -13,7 +13,7 @@
 //@ComponentScan("full")
 //@ComponentScan("full.controllers")
 //public class WebConfig implements WebMvcConfigurer {
-	
+
 //  BASIC view resolver:
 //	@Bean
 //	public ViewResolver viewResolver() {

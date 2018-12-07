@@ -7,15 +7,12 @@ import java.util.List;
 
 import org.springframework.security.core.userdetails.UserDetailsService;
 
-
-
 public interface UserService extends UserDetailsService {
 
-    User findByUserName(String userName);
+	User findByUserName(String userName);
 
-    void save(CrmUser crmUser);
-    
-//    view users
+	void save(CrmUser crmUser);
+
 	public List<User> getUsers();
 
 	public void saveUser(CrmUser theUser);
@@ -23,7 +20,7 @@ public interface UserService extends UserDetailsService {
 	public User getUser(Long theId);
 
 	public void deleteUser(Long theId);
-	
+
 	public void saveUpdate(User user);
 
 }

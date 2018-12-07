@@ -10,16 +10,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import full.user.CrmUser;
 
 @Controller
-@RequestMapping({"/","/homepage"})
+@RequestMapping({ "/", "/homepage" })
 public class HomeController {
 
-	@RequestMapping(method=GET) 
+	@RequestMapping(method = GET)
 	public String home() {
-	return "home";
+		return "home";
 	}
-	@GetMapping("/swimWebsite") 
+
+	@GetMapping("/swimWebsite")
 	public String swim() {
-	return "swimWebsite";
+		return "swimWebsite";
 	}
 
 }

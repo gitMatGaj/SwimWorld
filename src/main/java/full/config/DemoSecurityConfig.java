@@ -1,7 +1,5 @@
 package full.config;
 
-
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -24,103 +22,93 @@ import full.service.UserService;
 @EnableWebSecurity
 public class DemoSecurityConfig extends WebSecurityConfigurerAdapter {
 
-//	// add a reference to our security data source
-//	
-//		@Autowired
-//		private DataSource securityDataSource;
-//		
-//	@Override
-//	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-//
-//		// add our users for in memory authentication
-////		
-////		@SuppressWarnings("deprecation")
-////		UserBuilder users = User.withDefaultPasswordEncoder();
-////		
-////		auth.inMemoryAuthentication()
-////			.withUser(users.username("john").password("test123").roles("EMPLOYEE"))
-////			.withUser(users.username("mary").password("test123").roles("EMPLOYEE", "MANAGER"))
-////			.withUser(users.username("susan").password("test123").roles("EMPLOYEE", "ADMIN"));
-//	
-//		// use jdbc authentication ... oh yeah!!!
-//		
-//		auth.jdbcAuthentication().dataSource(securityDataSource);
-//	}
-//
-//	@Override
-//	protected void configure(HttpSecurity http) throws Exception {
-//
-//		http.authorizeRequests()
-//		
-//			.antMatchers("/main").hasRole("EMPLOYEE")
-//			.antMatchers("/main/leaders/**").hasRole("MANAGER")
-//			.antMatchers("/main/systems/**").hasRole("ADMIN")
-//			.and()
-//			.formLogin()
-//				.loginPage("/showMyLoginPage")
-//				.loginProcessingUrl("/authenticateTheUser")
-//				
-//				.permitAll()
-//			.and()
-//			.logout()
-//			.permitAll()
-//			.and()
-//			.exceptionHandling().accessDeniedPage("/access-denied");
-//			http.formLogin().defaultSuccessUrl("/main", true);
-//		
-//	}
 	// add a reference to our security data source
-    @Autowired
-    private UserService userService;
-	
-    @Autowired
-    private CustomAuthenticationSuccessHandler customAuthenticationSuccessHandler;
-    
-   @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.authenticationProvider(authenticationProvider());
-    }
-	
+	@Autowired
+	private UserService userService;
+
+	@Autowired
+	private CustomAuthenticationSuccessHandler customAuthenticationSuccessHandler;
+
+	@Override
+	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+		auth.authenticationProvider(authenticationProvider());
+	}
+
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 
 		http.authorizeRequests()
 
-         	.antMatchers("/main","/swimWebsite").hasAnyRole("USER","ADMIN")
+				.antMatchers("/main", "/swimWebsite").hasAnyRole("USER", "ADMIN")
 //			.antMatchers("/main/leaders/**").hasRole("MANAGER")
-			.antMatchers("/admin/list/**").hasRole("ADMIN")
-			.and()
-			.formLogin()
-				.loginPage("/showMyLoginPage")
-				.loginProcessingUrl("/authenticateTheUser")
-				.successHandler(customAuthenticationSuccessHandler)
-				.permitAll()
-			.and()
-			.logout()
-			.permitAll()
-			.and()
-			.exceptionHandling().accessDeniedPage("/access-denied");
-			http.formLogin().defaultSuccessUrl("/main", true);
-		
+				.antMatchers("/admin/list/**").hasRole("ADMIN").and().formLogin().loginPage("/showMyLoginPage")
+				.loginProcessingUrl("/authenticateTheUser").successHandler(customAuthenticationSuccessHandler)
+				.permitAll().and().logout().permitAll().and().exceptionHandling().accessDeniedPage("/access-denied");
+		http.formLogin().defaultSuccessUrl("/main", true);
+
 	}
 
-		//bcrypt bean definition
-		@Bean
-		public BCryptPasswordEncoder passwordEncoder() {
-			return new BCryptPasswordEncoder();
-		}
+	// bcrypt bean definition
+	@Bean
+	public BCryptPasswordEncoder passwordEncoder() {
+		return new BCryptPasswordEncoder();
+	}
 
-		//authenticationProvider bean definition
-		@Bean
-		public DaoAuthenticationProvider authenticationProvider() {
-			DaoAuthenticationProvider auth = new DaoAuthenticationProvider();
-			auth.setUserDetailsService(userService); //set the custom user details service
-			auth.setPasswordEncoder(passwordEncoder()); //set the password encoder - bcrypt
-			return auth;
-		}
+	// authenticationProvider bean definition
+	@Bean
+	public DaoAuthenticationProvider authenticationProvider() {
+		DaoAuthenticationProvider auth = new DaoAuthenticationProvider();
+		auth.setUserDetailsService(userService); // set the custom user details service
+		auth.setPasswordEncoder(passwordEncoder()); // set the password encoder - bcrypt
+		return auth;
+	}
 
+//		// add a reference to our security data source
+	//
+//			@Autowired
+//			private DataSource securityDataSource;
+//			
+//		@Override
+//		protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+	//
+//			// add our users for in memory authentication
+//			
+//			@SuppressWarnings("deprecation")
+//			UserBuilder users = User.withDefaultPasswordEncoder();
+//			
+//			auth.inMemoryAuthentication()
+//				.withUser(users.username("john").password("test123").roles("EMPLOYEE"))
+//				.withUser(users.username("mary").password("test123").roles("EMPLOYEE", "MANAGER"))
+//				.withUser(users.username("susan").password("test123").roles("EMPLOYEE", "ADMIN"));
+	//
+//			// use jdbc authentication ... oh yeah!!!
+//			
+//			auth.jdbcAuthentication().dataSource(securityDataSource);
+//		}
+	//
+//		@Override
+//		protected void configure(HttpSecurity http) throws Exception {
+	//
+//			http.authorizeRequests()
+//			
+//				.antMatchers("/main").hasRole("EMPLOYEE")
+//				.antMatchers("/main/leaders/**").hasRole("MANAGER")
+//				.antMatchers("/main/systems/**").hasRole("ADMIN")
+//				.and()
+//				.formLogin()
+//					.loginPage("/showMyLoginPage")
+//					.loginProcessingUrl("/authenticateTheUser")
+//					
+//					.permitAll()
+//				.and()
+//				.logout()
+//				.permitAll()
+//				.and()
+//				.exceptionHandling().accessDeniedPage("/access-denied");
+//				http.formLogin().defaultSuccessUrl("/main", true);
+//			
+//		}
 }
-
 
 
 

@@ -26,7 +26,6 @@ import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 
-
 /**
  * Configuration contains View generation properties
  *
@@ -38,76 +37,76 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
 @Configuration
 public class ViewResolverConfiguration implements WebMvcConfigurer {
 
-    /**
-     * Method defines Apache Tiles configuration object
-     * @return Apache Tiles configuration object
-     */
-//    @Bean
-//    public TilesConfigurer getTilesConfigurer() {
-//        TilesConfigurer tilesConfigurer = new TilesConfigurer();
-//
-//        tilesConfigurer.setDefinitions(
-//        		"/WEB-INF/layout/tiles.xml"
-//        );
-//
-//        return tilesConfigurer;
-//    }
-//
-//    /**
-//     * Defining Apache Tiles view resolver
-//     * @return Implementation of ViewResolver interface
-//     */
-//    @Bean
-//    public ViewResolver getTilesViewResolver() {
-//        return new TilesViewResolver();
-//    }
-    
 //  // THYMELEAF:
 
-	 @Autowired
-	   private ApplicationContext applicationContext;
+	@Autowired
+	private ApplicationContext applicationContext;
 
-	   /*
-	    * STEP 1 - Create SpringResourceTemplateResolver
-	    * */
-	   @Bean
-	   public SpringResourceTemplateResolver templateResolver() {
-	      SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
-	      templateResolver.setApplicationContext(applicationContext);
-	      templateResolver.setPrefix("/WEB-INF/templates/");
-	      templateResolver.setSuffix(".html");
-	      templateResolver.setCharacterEncoding("UTF-8");
-	      templateResolver.setTemplateMode("XHTML");
-	      return templateResolver;
-	   }
+	/*
+	 * STEP 1 - Create SpringResourceTemplateResolver
+	 */
+	@Bean
+	public SpringResourceTemplateResolver templateResolver() {
+		SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
+		templateResolver.setApplicationContext(applicationContext);
+		templateResolver.setPrefix("/WEB-INF/templates/");
+		templateResolver.setSuffix(".html");
+		templateResolver.setCharacterEncoding("UTF-8");
+		templateResolver.setTemplateMode("XHTML");
+		return templateResolver;
+	}
 
-	   /*
-	    * STEP 2 - Create SpringTemplateEngine
-	    * */
-	   @Bean
-	   public SpringTemplateEngine templateEngine() {
-	      SpringTemplateEngine templateEngine = new SpringTemplateEngine();
-	      templateEngine.setTemplateResolver(templateResolver());
-	      templateEngine.setEnableSpringELCompiler(true);
-	      templateEngine.addDialect(new SpringSecurityDialect());
-	      return templateEngine;
-	   }
+	/*
+	 * STEP 2 - Create SpringTemplateEngine
+	 */
+	@Bean
+	public SpringTemplateEngine templateEngine() {
+		SpringTemplateEngine templateEngine = new SpringTemplateEngine();
+		templateEngine.setTemplateResolver(templateResolver());
+		templateEngine.setEnableSpringELCompiler(true);
+		templateEngine.addDialect(new SpringSecurityDialect());
+		return templateEngine;
+	}
 
-	   /*
-	    * STEP 3 - Register ThymeleafViewResolver
-	    * */
-	   @Override
-	   public void configureViewResolvers(ViewResolverRegistry registry) {
-	      ThymeleafViewResolver resolver = new ThymeleafViewResolver();
-	      resolver.setTemplateEngine(templateEngine());
-	      resolver.setCharacterEncoding("UTF-8");
-	      registry.viewResolver(resolver);
-	   }
+	/*
+	 * STEP 3 - Register ThymeleafViewResolver
+	 */
+	@Override
+	public void configureViewResolvers(ViewResolverRegistry registry) {
+		ThymeleafViewResolver resolver = new ThymeleafViewResolver();
+		resolver.setTemplateEngine(templateEngine());
+		resolver.setCharacterEncoding("UTF-8");
+		registry.viewResolver(resolver);
+	}
 
-	   //		Enables view static things contains in applications resource
-		@Override
-	    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-	        registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
-	    }
+	// Enables view static things contains in applications resource
+	@Override
+	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
+	}
 
+	/**
+	 * Method defines Apache Tiles configuration object
+	 * 
+	 * @return Apache Tiles configuration object
+	 */
+//	    @Bean
+//	    public TilesConfigurer getTilesConfigurer() {
+//	        TilesConfigurer tilesConfigurer = new TilesConfigurer();
+	//
+//	        tilesConfigurer.setDefinitions(
+//	        		"/WEB-INF/layout/tiles.xml"
+//	        );
+	//
+//	        return tilesConfigurer;
+//	    }
+	//
+//	    /**
+//	     * Defining Apache Tiles view resolver
+//	     * @return Implementation of ViewResolver interface
+//	     */
+//	    @Bean
+//	    public ViewResolver getTilesViewResolver() {
+//	        return new TilesViewResolver();
+//	    }
 }

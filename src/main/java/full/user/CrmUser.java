@@ -7,42 +7,39 @@ import full.validation.ValidEmail;
 
 import full.validation.FieldMatch;
 
-
-
 @FieldMatch.List({
-    @FieldMatch(first = "password", second = "matchingPassword", message = "The password fields must match")
-})
+		@FieldMatch(first = "password", second = "matchingPassword", message = "The password fields must match") })
 public class CrmUser {
 
-	@NotNull(message="{userName.blind}")
-	@Size(min=5, max=30, message="{userName.size}")
+	@NotNull(message = "{userName.blind}")
+	@Size(min = 5, max = 30, message = "{userName.size}")
 	private String userName;
 
-	@NotNull(message="{password.blind}")
-	@Size(min=5, max=30, message="{password.size}")
+	@NotNull(message = "{password.blind}")
+	@Size(min = 5, max = 30, message = "{password.size}")
 	private String password;
-	
+
 //	@NotNull(message="{matchingPassword.blind}")
 //	@Size(min=5, max=30, message="{matchingPassword.size}")
 	private String matchingPassword;
 
-	@NotNull(message="{firstName.blind}")
-	@Size(min=5, max=30, message="{firstName.size}")
+	@NotNull(message = "{firstName.blind}")
+	@Size(min = 5, max = 30, message = "{firstName.size}")
 	private String firstName;
 
-	@NotNull(message="{lastName.blind}")
-	@Size(min=5, max=30, message="{lastName.size}")
+	@NotNull(message = "{lastName.blind}")
+	@Size(min = 5, max = 30, message = "{lastName.size}")
 	private String lastName;
 
-	@ValidEmail(message="{email.form}")
-	@NotNull(message="{email.blind}")
-	@Size(min=5, max=30, message="{email.size}")
+	@ValidEmail(message = "{email.form}")
+	@NotNull(message = "{email.blind}")
+	@Size(min = 5, max = 30, message = "{email.size}")
 	private String email;
 
 	public CrmUser() {
 
 	}
-	
+
 	public String getUserName() {
 		return userName;
 	}

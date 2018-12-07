@@ -24,15 +24,15 @@ public class RoleDaoImpl implements RoleDao {
 		// now retrieve/read from database using name
 		Query<Role> theQuery = currentSession.createQuery("from Role where name=:roleName", Role.class);
 		theQuery.setParameter("roleName", theRoleName);
-		
+
 		Role theRole = null;
-		
+
 		try {
 			theRole = theQuery.getSingleResult();
 		} catch (Exception e) {
 			theRole = null;
 		}
-		
+
 		return theRole;
 	}
 }
