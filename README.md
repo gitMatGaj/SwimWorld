@@ -18,13 +18,13 @@ Create an account as a common user or simply log in using user or admin credenti
  
   If you are an admin you can also (CRUD): 
     
-- see the list of users
+- See the list of users
  
-- add new admin (default password "firmowe")
+- Add new admin (default password "firmowe")
     
-- grant common users admin status  
+- Grant common users admin status  
     
-- delete users
+- Delete users
 
 - update users
 # The technologies that I used:
