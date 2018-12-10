@@ -26,7 +26,7 @@ Create an account as a common user or simply log in using user or admin credenti
     
 - Delete users
 
-- update users
+- Update users
 # The technologies that I used:
 - Java
 - Spring Framework/MVC/Security
