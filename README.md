@@ -20,12 +20,13 @@ Create an account as a common user or simply log in using user or admin credenti
     
 - see the list of users
  
-- add new admin
+- add new admin (default password "firmowe")
     
-- grant common users admin status (default password "firmowe") 
+- grant common users admin status  
     
 - delete users
 
+- update users
 # The technologies that I used:
 - Java
 - Spring Framework/MVC/Security
