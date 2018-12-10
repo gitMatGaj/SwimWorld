@@ -11,16 +11,18 @@ public interface UserService extends UserDetailsService {
 
 	User findByUserName(String userName);
 
-	void save(CrmUser crmUser);
+	public void register(CrmUser crmUser);
 
 	public List<User> getUsers();
 
-	public void saveUser(CrmUser theUser);
+	public void createAdmin(CrmUser theUser);
 
 	public User getUser(Long theId);
 
 	public void deleteUser(Long theId);
 
-	public void saveUpdate(User user);
+	public void update(User user);
+	 
+	public void upgrade(User user);
 
 }

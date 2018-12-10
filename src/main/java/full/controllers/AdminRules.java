@@ -48,10 +48,10 @@ public class AdminRules {
 
 	// ADMIN add add User
 	@PostMapping("/saveUser")
-	public String saveCustomer(@ModelAttribute("user") CrmUser theCrmUser) {
+	public String createAdmin(@ModelAttribute("user") CrmUser theCrmUser) {
 
 		// create user account
-		userService.saveUser(theCrmUser);
+		userService.createAdmin(theCrmUser);
 
 		return "redirect:/admin/list";
 	}
@@ -67,6 +67,18 @@ public class AdminRules {
 	}
 
 	// Admin update user
+	@GetMapping("/upgrade")
+	public String upgrade(@RequestParam("UserId") Long theId, Model theModel) {
+
+		// get the customer from our service
+		User theUser = userService.getUser(theId);
+
+		userService.upgrade(theUser);
+		// send over to our form
+		return "redirect:/admin/list";
+	}
+
+	// Admin update user
 	@GetMapping("/showFormForUpdate")
 	public String showFormForUpdate(@RequestParam("UserId") Long theId, Model theModel) {
 
@@ -74,17 +86,16 @@ public class AdminRules {
 		User theUser = userService.getUser(theId);
 
 		// set customer as a model attribute to pre-populate the form
-		theModel.addAttribute("user", theUser);
-
+       		theModel.addAttribute("user", theUser);
 		// send over to our form
 		return "customer-update";
 	}
-
+	
 	@PostMapping("/saveUpdate")
 	public String saveCustomer(@ModelAttribute("user") User user) {
 
 		// save the customer using our service
-		userService.saveUpdate(user);
+		userService.update(user);
 
 		return "redirect:/admin/list";
 	}

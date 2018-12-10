@@ -17,9 +17,8 @@
 	<div class="row">
 	<form method="POST" th:action="@{/admin/saveUpdate}" th:object="${user}" >
 
+	
 		<input type="hidden" th:field="*{id}" />
-		
-				
 		<label >First name:</label>
 			<input class="form-control mb-2 mr-sm-2" type="text" th:field="*{firstName}"  placeholder="First name" onfocus="this.placeholder=''"onblur="this.placeholder='First name'"/> <br/>
 		
@@ -32,11 +31,9 @@
 		<label  >Username:</label>
 			<input class="form-control mb-2 mr-sm-2" type="text" th:field="*{userName}" placeholder="Username"onfocus="this.placeholder=''"onblur="this.placeholder='Username'" /> <br/>
 			
-		<label  >New password:</label>
-			<input class="form-control mb-2 mr-sm-2"  type="password" th:field="*{password}" placeholder="Password" onfocus="this.placeholder=''"onblur="this.placeholder='Password'"/> <br/>
-
+		
 				
-		<input class="btn btn-primary mb-2 button" type="submit" value="Upgrade to admin" />
+		<input class="btn btn-primary mb-2 button" type="submit" value="Update" />
 					
 		<input
   type="hidden"

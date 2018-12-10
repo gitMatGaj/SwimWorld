@@ -31,12 +31,6 @@ public class UserServiceImpl implements UserService {
 	@Autowired
 	private RoleDao roleDao;
 
-//	@Autowired
-//	private User user;
-
-//	@Autowired
-//	private User userr;
-
 	@Autowired
 	private BCryptPasswordEncoder passwordEncoder;
 
@@ -49,7 +43,7 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	@Transactional
-	public void save(CrmUser crmUser) {
+	public void register(CrmUser crmUser) {
 
 		User user = new User();
 		// assign user details to the user object
@@ -59,7 +53,7 @@ public class UserServiceImpl implements UserService {
 		user.setLastName(crmUser.getLastName());
 		user.setEmail(crmUser.getEmail());
 
-		// give user default role of "employee"
+		// give user default role of "USER"
 		user.setRoles(Arrays.asList(roleDao.findRoleByName("ROLE_USER")));
 
 		// save user in the database
@@ -81,8 +75,6 @@ public class UserServiceImpl implements UserService {
 		return roles.stream().map(role -> new SimpleGrantedAuthority(role.getName())).collect(Collectors.toList());
 	}
 
-//	view users
-
 	@Override
 	@Transactional
 	public List<User> getUsers() {
@@ -91,19 +83,17 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	@Transactional
-	public void saveUser(CrmUser crmUser) {
+	public void createAdmin(CrmUser crmUser) {
 		User user = new User();
-		// assign user details to the user object
+
 		user.setUserName(crmUser.getUserName());
 		user.setPassword(passwordEncoder.encode("firmowe"));
 		user.setFirstName(crmUser.getFirstName());
 		user.setLastName(crmUser.getLastName());
 		user.setEmail(crmUser.getEmail());
 
-		// give user default role of "employee"
 		user.setRoles(Arrays.asList(roleDao.findRoleByName("ROLE_ADMIN")));
 
-		// save user in the database
 		userDao.saveUser(user);
 	}
 
@@ -123,20 +113,24 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	@Transactional
-	public void saveUpdate(User user) {
-		User userr = new User();
-		userr.setId(user.getId());
-		userr.setUserName(user.getUserName());
-		userr.setPassword(passwordEncoder.encode(user.getPassword()));
-		userr.setFirstName(user.getFirstName());
-		userr.setLastName(user.getLastName());
-		userr.setEmail(user.getEmail());
+	public void update(User user) {
 
-		// give user default role of "employee"
-		userr.setRoles(Arrays.asList(roleDao.findRoleByName("ROLE_ADMIN")));
+		User updateduser = new User();
+		updateduser = userDao.getUser(user.getId());
+		updateduser.setUserName(user.getUserName());
+		updateduser.getPassword();
+		updateduser.setFirstName(user.getFirstName());
+		updateduser.setLastName(user.getLastName());
+		updateduser.setEmail(user.getEmail());
 
-		// save user in the database
+		userDao.saveUser(updateduser);
+	}
 
-		userDao.saveUser(userr);
+	@Override
+	@Transactional
+	public void upgrade(User user) {
+
+		user.setRoles(Arrays.asList(roleDao.findRoleByName("ROLE_ADMIN")));
+		userDao.saveUser(user);
 	}
 }
