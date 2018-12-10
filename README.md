@@ -9,7 +9,7 @@ Create an account as a common user or simply log in using user or admin credenti
     - username: user
     - password: testowy
  
-  If you are a common user you can go to the SwimWorld
+  If you are a common user you can go to the SwimWorld website
   
   b) Admin:
     
