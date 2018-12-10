@@ -55,7 +55,7 @@ Create an account as a common user or simply log in using user or admin credenti
 
 
 # Configuration
-1. Create mysql database and run SQL code in databaseInitialScript.sql file
+1. Create mysql(Mysql Workbench 8.0) database and run SQL code in databaseInitialScript.sql file
 2. In /SpringHibernate/src/main/resources/persistence-mysql.properties class set url JDBC database, username and access password.
 
 # Build project with Maven console
