@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:th="http://www.thymeleaf.org">
+	xmlns:th="http://www.thymeleaf.org"
+	>
 <head>
 <link rel="stylesheet" th:href="@{/resources/css/table.css}"/>
     <title>Title</title>
@@ -31,9 +32,11 @@
 			onclick="if (!(confirm('Are you sure you want to delete this customer?'))) return false"
 			 >Delete</a>
 		   |
+		   
 		   	<a th:href="@{/admin/upgrade(UserId=${user.id})}" 
 		   	onclick="if (!(confirm('Are you sure you want upgrade user to the admin?'))) return false"
-			 >Upgrade to Admin</a>	
+			 >Upgrade to Admin</a>
+			 		
 		    |
 		    <a th:href="@{/admin/showFormForUpdate(UserId=${user.id})}" 
 			 >Update</a>			   
