@@ -1,16 +1,24 @@
 body
 {
 	
-	background-image: url(../images/tlo.jpg);
-	font-size: 20px;
+	margin:0px;
+	font-size: 25px;
     font-family: sans-serif;
-    background-size: cover;
-        background-repeat: no-repeat;
-    height: auto;
-    background-position: center;
-    overflow: auto;
 }
-
+.bg
+{
+	background-image: url(../images/tlo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    overflow: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #container
 {
 	background-color: white;
@@ -18,7 +26,6 @@ body
 	padding: 50px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 100px;
 	-webkit-box-shadow: 3px 3px 30px 10px rgba(204,204,204,0.9);
 	-moz-box-shadow: 3px 3px 30px 10px rgba(204,204,204,0.9);
 	box-shadow: 3px 3px 30px 10px rgba(204,204,204,0.9);

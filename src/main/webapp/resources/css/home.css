@@ -1,17 +1,22 @@
 body
 {
 	margin:0;
+	font-size: 25px;
+    font-family: sans-serif;
 }
 .bg
 {
-	background-image: url(../images/tlo.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
+    background-image: url(../images/tlo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     background-position: center;
-   position: absolute;
+    position: absolute;
     width: 100%;
-     overflow: auto;
-     height: 100vh;
+    overflow: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .active
 {
@@ -19,12 +24,8 @@ body
 }
 .row
 {
-	position: absolute;
-    left: 30%;
-    top: 35%;
-    width: 40%;
-    height: 30%;
     text-align: center;
+   
    
 }
 .button
@@ -41,7 +42,8 @@ body
 	transition: all .2s ease-in-out;
 	text-align: center;
     padding: 10px;
-    font-size: 25px;
+    font-size: 35px;
+    font-family: sans-serif;
 }
 
 .row a:hover {
